@@ -9,4 +9,4 @@ vim.api.nvim_set_keymap('n', '<leader>!', ':q!<CR>', { noremap = true, silent = 
 
 -- NVIM Tree
 
-vim.keymap.set('n', '<C-b>', '<cmd>NvimTreeToggle<cr>', {noremap = true})
+vim.keymap.set('n', '<C-b>', '<cmd>NvimTreeToggle<cr>', { noremap = true })

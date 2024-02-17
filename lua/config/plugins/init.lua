@@ -8,4 +8,7 @@ require("config.plugins.nvimtree")
 require("config.plugins.trouble")
 require("config.plugins.bufferline")
 require("config.plugins.telescope")
-
+require("config.plugins.formatter")
+require("config.plugins.blankline")
+require("config.plugins.notifications")
+require("config.plugins.comment")

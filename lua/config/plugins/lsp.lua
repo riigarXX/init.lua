@@ -1,17 +1,29 @@
 -- Configurar los servidores LSP
-local lspconfig = require'lspconfig'
-local servers = {"cssls", "html","tsserver", "vuels" }
+local lspconfig = require 'lspconfig'
+local servers = { "cssls", "html", "tsserver", "vuels", "lua_ls" }
 for _, server in ipairs(servers) do
-    lspconfig[server].setup{}
+	lspconfig[server].setup {}
 end
 -- Configurar LSP Zero
-local nvim_lsp = require'lspconfig'
+local nvim_lsp = require 'lspconfig'
 local on_attach = function(client, bufnr)
-    require'completion'.on_attach(client, bufnr)
+	require 'completion'.on_attach(client, bufnr)
 end
 
-nvim_lsp.zls.setup {
-    on_attach = on_attach,
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "css", "html", "json", "node" }
+nvim_lsp.tsserver.setup {
+	on_attach = on_attach,
+	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" }
 }
 
+nvim_lsp.lua_ls.setup {
+	on_attach = on_attach,
+	filetypes = {
+		"lua"
+	}
+}
+nvim_lsp.vuels.setup {
+	on_attach = on_attach,
+	filetypes = {
+		"vue"
+	}
+}

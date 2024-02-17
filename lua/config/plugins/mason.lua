@@ -3,7 +3,10 @@ require("mason").setup({
         icons = {
             package_installed = "✓",
             package_pending = "➜",
-            package_uninstalled = "✗"
+            package_uninstalled = "✗",
         }
     }
 })
+require("mason-lspconfig").setup {
+    ensure_installed = { "lua_ls","tsserver","volar","eslint" }
+}
