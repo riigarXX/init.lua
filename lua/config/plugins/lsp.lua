@@ -1,6 +1,6 @@
 -- Configurar los servidores LSP
 local lspconfig = require 'lspconfig'
-local servers = { "cssls", "html", "tsserver", "vuels", "lua_ls" }
+local servers = { "cssls", "html", "tsserver", "volar", "lua_ls" }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup {}
 end
@@ -21,7 +21,7 @@ nvim_lsp.lua_ls.setup {
 		"lua"
 	}
 }
-nvim_lsp.vuels.setup {
+nvim_lsp.volar.setup {
 	on_attach = on_attach,
 	filetypes = {
 		"vue"

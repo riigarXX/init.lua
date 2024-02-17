@@ -6,21 +6,25 @@ return require('packer').startup(function(use)
 
 	-- Themes
 	use 'Mofiqul/dracula.nvim'
+	use 'catppuccin/nvim'
 
 	use {
 		"williamboman/mason.nvim",
-		run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+		run = ":MasonUpdate"
 	}
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 
+	use "tpope/vim-fugitive"
+
 	use 'rcarriga/nvim-notify'
+
+	use "lewis6991/gitsigns.nvim"
 
 	use "lukas-reineke/indent-blankline.nvim"
 
-	-- or                            , branch = '0.1.x',
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
