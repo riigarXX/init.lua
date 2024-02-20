@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
+	use 'stevearc/dressing.nvim'
 
 	use "tpope/vim-fugitive"
 
@@ -57,6 +58,7 @@ return require('packer').startup(function(use)
 
 			-- Autocompletion
 			{ 'hrsh7th/nvim-cmp' },
+			{ 'onsails/lspkind.nvim' },
 			{ 'hrsh7th/cmp-buffer' },
 			{ 'hrsh7th/cmp-path' },
 			{ 'saadparwaiz1/cmp_luasnip' },
