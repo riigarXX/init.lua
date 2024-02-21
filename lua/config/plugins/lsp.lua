@@ -1,6 +1,6 @@
 -- Configurar los servidores LSP
 local lspconfig = require 'lspconfig'
-local servers = { "cssls", "html", "tsserver", "volar", "lua_ls" }
+local servers = { "cssls", "html", "tsserver", "volar", "lua_ls", "remark_ls" }
 for _, server in ipairs(servers) do
 	lspconfig[server].setup {}
 end
