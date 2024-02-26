@@ -12,10 +12,19 @@ return require('packer').startup(function(use)
 		"williamboman/mason.nvim",
 		run = ":MasonUpdate"
 	}
+
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
+
+	use 'mg979/vim-visual-multi'
+
+	use({
+		"kylechui/nvim-surround",
+		tag = "*"
+	})
+
 	use 'stevearc/dressing.nvim'
 
 	use "tpope/vim-fugitive"
